@@ -8238,7 +8238,7 @@ h3 {
   }
 }
 .container {
-  max-width: 1605px;
+  max-width: 1400px;
 }
 @media screen and (max-width: 992px) {
   .container {
@@ -8329,17 +8329,27 @@ a.navbar-brand:hover {
 }
 
 .logo {
+  min-height: 60px;
   width: auto !important;
+  max-width: 236px;
 }
 @media screen and (max-width: 992px) {
   .logo {
-    height: 45px !important;
+    min-height: 45px !important;
+    max-width: 177px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .logo {
+    max-width: 130px;
   }
 }
 
 section {
-  margin-top: 55px;
-  margin-bottom: 55px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 section > .row:last-child div[class*=col] {
   margin-bottom: 0 !important;
@@ -8470,12 +8480,22 @@ nav.top-nav a.nav-link {
 nav.top-nav a.nav-link:hover, nav.top-nav a.nav-link.active {
   border-bottom: 2px dotted #fff;
 }
-nav.top-nav a .navbar-brand svg * {
-  fill: #fff;
+nav.top-nav a.navbar-brand {
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 1199px) {
+  nav.top-nav #mob-navbar {
+    transition: none;
+  }
+  nav.top-nav #mob-navbar ul {
+    padding-top: 50px;
+    height: 100vh;
+  }
 }
 @media screen and (max-width: 576px) {
   nav.top-nav .navbar-toggler-icon {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
   }
 }
 nav.top-nav .navbar-toggler[aria-expanded=false] .navbar-toggler-icon {
@@ -8552,7 +8572,13 @@ header {
     padding-right: 20px;
   }
 }
-@media screen and (max-width: 768px) and (max-width: 993px) and (max-width: 1199px) {
+@media screen and (max-width: 768px) and (max-width: 576px) {
+  header .api-screen a.btn {
+    display: block;
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 993px) and (max-width: 1199px) {
   header .api-screen {
     background-size: 150%, cover;
   }
@@ -8583,6 +8609,8 @@ iframe {
 .more-graphics {
   position: relative;
   padding-bottom: 2rem;
+  padding-left: initial;
+  padding-right: initial;
   background: linear-gradient(#f5f5f5, #daecfb);
 }
 
@@ -8614,6 +8642,12 @@ iframe {
 /* Footer */
 footer {
   background: linear-gradient(#f5f5f5, #daecfb);
+}
+footer .footer-logo {
+  border: none;
+}
+footer .footer-logo:hover {
+  border: none;
 }
 footer nav {
   border-top: 1px dotted rgba(115, 115, 115, 0.7);
